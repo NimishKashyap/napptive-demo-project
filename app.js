@@ -1,15 +1,13 @@
 import express from "express";
 import cors from "cors";
-import dotenv from "dotenv";
 
 const app = express();
-dotenv.config()
 
 app.use(cors());
 app.use(express.json());
 
 let arr = []
-const port = process.env.PORT;
+const port = 8000;
 
 app.get("/",(req,res)=> {
 	res.send("HELLO WORLD:");
