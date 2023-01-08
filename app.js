@@ -6,21 +6,20 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-let arr = []
+let arr = [];
 const port = 8000;
 
-app.get("/",(req,res)=> {
-	res.send("HELLO WORLD:");
+app.get("/", (req, res) => {
+  res.send("HELLO WORLD after runner:");
 });
 
-app.post("/",(req,res)=> {
-	const {name} = req.body;
+app.post("/", (req, res) => {
+  const { name } = req.body;
 
-	arr.push(name);
-	res.send("HELLO WORLD:" + name);
+  arr.push(name);
+  res.send("HELLO WORLD:" + name);
 });
 
 app.listen(port, () => {
-	console.log("SERVER UP AT PORT: " + port);
-})
-
+  console.log("SERVER UP AT PORT: " + port);
+});
