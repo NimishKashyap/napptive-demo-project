@@ -13,6 +13,8 @@ jobs:
         node-version: [16.x]
 
     steps:
+      - run: echo ${{ github.event_name }}
+    
       - name: Code checkout
         uses: actions/checkout@v2
       - name: Setup Nodejs
